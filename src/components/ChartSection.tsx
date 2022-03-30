@@ -1,27 +1,7 @@
-import React from "react";
-import {
-  CartesianGrid,
-  Line,
-  LineChart,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
 import ICONS from "../svg";
+import Chart from "./Chart";
 import Percentage from "./Percentage";
 import ResponseTime from "./ResponseTime";
-
-const data = [
-  { name: "Jan", uv: 12 },
-  { name: "Feb", uv: 18 },
-  { name: "Mar", uv: 44 },
-  { name: "Apr", uv: 34 },
-  { name: "May", uv: 20 },
-  { name: "Jun", uv: 30 },
-  { name: "Jul", uv: 40 },
-  { name: "Aug", uv: 32 },
-];
-
 interface IChartSection {
   title: string;
   title2: string;
@@ -49,19 +29,8 @@ const ChartSection = ({ title, title2, color, bg }: IChartSection) => {
             </div>
           </div>
         </div>
-        <div>
-          {/* <LineChart
-            width={800}
-            height={250}
-            data={data}
-            margin={{ top: 50, right: 0, bottom: 5, left: 0 }}
-          >
-            <Line type="linear" dataKey="uv" stroke={color} />
-            <CartesianGrid stroke="#ECEBF5" strokeDasharray="1" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-          </LineChart> */}
+        <div className="my-4 h-[182px]">
+          <Chart label={title} color={color} />
         </div>
       </div>
       <div className="flex-[2] items-center justify-between gap-4 py-8 px-6 md:flex 2xl:block">
