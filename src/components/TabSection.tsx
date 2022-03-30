@@ -9,11 +9,11 @@ interface ITabSection {
 const TabSection = ({ activeTab, setActiveTab, tabs }: ITabSection) => {
   return (
     <section className="border-b">
-      <div className="mx-auto w-[92%]">
-        <div className="flex gap-3 md:gap-10">
+      <div className="mx-auto max-w-[92%]">
+        <div className="scrollbar flex gap-5 overflow-x-auto md:gap-10">
           {tabs.map((elem) => (
             <div
-              className={`cursor-pointer py-4 ${
+              className={`flex-none cursor-pointer py-4 ${
                 activeTab === elem.name ? "border-b-2 border-[#6837EF]" : ""
               }`}
               onClick={() => setActiveTab(elem.name)}

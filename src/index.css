@@ -12,6 +12,15 @@ body {
   font-weight: 500;
 }
 
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* media query 768px max-width */
 @media (max-width: 767px) {
   .sidebar {
